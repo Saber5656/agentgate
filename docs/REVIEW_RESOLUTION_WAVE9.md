@@ -37,7 +37,7 @@ Missing, pending, failed, skipped, cancelled, timed-out, stale, or non-accepting
 - Line: 113
 - Finding basis: Existing review finding “Label the bare fences.” at `docs/DESIGN.md:113`.
 
-**Normative resolution**: At `docs/DESIGN.md:113`, Every fenced code block in the cited DESIGN.md ranges SHALL have an explicit language tag, using text for prose examples and the syntax language for code examples.
+**Normative resolution**: At the exact ranges `docs/DESIGN.md:99-113`, `docs/DESIGN.md:145-163`, `docs/DESIGN.md:178-184`, and `docs/DESIGN.md:385-389`, every fenced code block SHALL have an explicit language tag, using `text` for prose examples and the syntax language for code examples.
 
 **Focused verification gate**: Inspect exactly `docs/DESIGN.md:99-113`, `docs/DESIGN.md:145-163`, `docs/DESIGN.md:178-184`, and `docs/DESIGN.md:385-389`; enumerate every fenced block in those four ranges, assert each opening fence has a non-empty language tag, and run `markdownlint-cli2 --rule MD040 docs/DESIGN.md` with zero MD040 findings.
 
