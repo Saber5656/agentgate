@@ -39,7 +39,7 @@ Missing, pending, failed, skipped, cancelled, timed-out, stale, or non-accepting
 
 **Normative resolution**: At `docs/DESIGN.md:113`, Every fenced code block in the cited DESIGN.md ranges SHALL have an explicit language tag, using text for prose examples and the syntax language for code examples.
 
-**Focused verification gate**: Run markdownlint on every cited range and assert zero MD040 findings.
+**Focused verification gate**: Inspect exactly `docs/DESIGN.md:99-113`, `docs/DESIGN.md:145-163`, `docs/DESIGN.md:178-184`, and `docs/DESIGN.md:385-389`; enumerate every fenced block in those four ranges, assert each opening fence has a non-empty language tag, and run `markdownlint-cli2 --rule MD040 docs/DESIGN.md` with zero MD040 findings.
 
 **Completion boundary**: This is a design-level response contract only. Resolve this thread only after its focused gate, applicable specialist handoff, and repository full validation are terminal success for the current head/base identity.
 
@@ -63,7 +63,7 @@ Missing, pending, failed, skipped, cancelled, timed-out, stale, or non-accepting
 
 **Normative resolution**: At `docs/DESIGN.md:619`, The permissionDecision JSON example SHALL be rendered in a fenced json block outside the Markdown table, with no raw pipe characters in table cells.
 
-**Focused verification gate**: Render the cited section and run markdownlint; assert the JSON example is outside the table and MD056 is absent.
+**Focused verification gate**: Extract exactly `docs/DESIGN.md:608-622`, parse the `§13.2 Behavior` table at lines 610-615, and assert it has three columns per row with no raw pipe inside a cell; assert the complete `permissionDecision` JSON example appears in a fenced `json` block outside that table, then run `markdownlint-cli2 --rule MD056 docs/DESIGN.md` and require zero MD056 findings.
 
 **Completion boundary**: This is a design-level response contract only. Resolve this thread only after its focused gate, applicable specialist handoff, and repository full validation are terminal success for the current head/base identity.
 
